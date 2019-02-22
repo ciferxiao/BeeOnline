@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        titlebar:centerText="我的订单"
+        titlebar:centerTextColor="@color/gray_33"
+        titlebar:centerTextSize="@dimen/size_17sp"
+        titlebar:centerType="textView"
+        titlebar:fillStatusBar="false"
+        titlebar:leftCustomView="@layout/view_custom_left"
+        titlebar:leftType="customView"
+        titlebar:rightType="none"
+        titlebar:showBottomLine="true" />
+
+
+    <com.beeonline.library.widget.TabIndicator
+        android:id="@+id/tab_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:layout_below="@+id/title_bar"
+        android:background="@color/white"
+        app:indicator_bottom_height="@dimen/dimen_2dp"
+        app:indicator_bottom_line_color="@color/white"
+        app:indicator_bottom_line_height="@dimen/dimen_1dp"
+        app:indicator_height="@dimen/dimen_42dp"
+        app:indicator_isBottom_line="true"
+        app:indicator_line_color="@color/red_ff0000"
+        app:indicator_normal_color="@color/gray_33"
+        app:indicator_select_textSize="@dimen/size_14sp"
+        app:indicator_selected_color="@color/red_ff0000"
+        app:indicator_textSize="14sp"
+        app:indicator_width="@dimen/dimen_0dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tab_indicator"
+        android:background="@color/white" />
+
+
+    <ImageView
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:src="@mipmap/title_bar_line" />
+</RelativeLayout>

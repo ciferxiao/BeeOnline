@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:titlebar="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_f5"
+    android:orientation="vertical">
+
+
+    <com.wuhenzhizao.titlebar.widget.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:leftCustomView="@layout/view_custom_left"
+        app:rightType="none"
+        titlebar:centerText="限时抢购"
+        titlebar:centerTextColor="@color/gray_33"
+        titlebar:centerTextSize="@dimen/size_17sp"
+        titlebar:centerType="textView"
+        titlebar:fillStatusBar="false"
+        titlebar:leftType="customView"
+        titlebar:showBottomLine="true" />
+
+    <!--   titlebar:rightImageResource="@mipmap/icon_add_black"
+                      titlebar:rightType="imageButton"-->
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar"
+        app:srlAccentColor="@android:color/white"
+        app:srlEnableAutoLoadMore="true"
+        app:srlEnablePreviewInEditMode="true"
+        app:srlPrimaryColor="@android:color/darker_gray">
+
+
+        <com.scwang.smartrefresh.header.MaterialHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <include
+        layout="@layout/view_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_bar" />
+
+    <ImageView
+        android:id="@+id/top_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar"
+        android:src="@mipmap/title_bar_line" />
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<item name="refresh_layout" type="id" />-->
+    <item name="emptyview_img" type="id" />
+    <item name="emptyview_tv_tip" type="id" />
+    <item name="work_flax_item" type="id" />
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BeeOnline</string>
+    <string name="emptyview_loading">加载中&#8230;</string>
+
+</resources>
